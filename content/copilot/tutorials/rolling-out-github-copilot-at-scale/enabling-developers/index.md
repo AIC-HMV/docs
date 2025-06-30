@@ -1,6 +1,6 @@
 ---
 title: Enabling developers to use GitHub Copilot
-shortTitle: Enable developers
+shortTitle: Enabling developers
 intro: Boost productivity by encouraging developers to make the most of Copilot features.
 versions:
   feature: copilot

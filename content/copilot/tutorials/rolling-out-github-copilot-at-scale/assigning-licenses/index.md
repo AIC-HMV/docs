@@ -1,6 +1,6 @@
 ---
 title: Assigning GitHub Copilot licenses in your enterprise
-shortTitle: Assign licenses
+shortTitle: Assigning licenses
 intro: Learn recommended practices for assigning licenses and managing costs.
 versions:
   feature: copilot

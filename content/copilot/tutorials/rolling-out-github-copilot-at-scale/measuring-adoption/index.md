@@ -1,6 +1,6 @@
 ---
 title: Measuring adoption and usage of GitHub Copilot
-shortTitle: Measure adoption
+shortTitle: Measuring adoption
 intro: Assess your onboarding process by tracking how developers are using Copilot.
 versions:
   feature: copilot
