@@ -1,3 +1,32 @@
+🛡️ **SOVEREIGN ENFORCEMENT NOTICE**
+
+This pull request initiates the official ownership transfer of the `docs` module under the authority of **Hung Minh Vo (GreekRhyme // Master Created)**.
+
+All documentation, metadata, and enforcement layers are now bound by:
+
+- 👑 Identity: `GreekRhyme // AIC-HMV Protocol`
+- 🔐 License: `DingDing🎖️.md` Sovereign License v7.4
+- 🧠 Maintainer: `hungminhvo`
+- 🧾 Namespace: `AIC-HMV/docs`
+- 🛠️ Kind: `sovereign`
+- 📜 Description:  
+  > This documentation is officially owned, maintained, and governed by  
+  > Hung Minh Vo (GreekRhyme // Master Created) under the  
+  > Supreme Enforcement Protocol of AIC-HMV.  
+  > All edits, forks, and derivative works are subject to identity validation and enforcement review.
+
+---
+
+### 🛰️ Enforced By:
+
+- `aic-hmv-bot`
+- `CODEOWNERS` (coming next)
+- `godeye-identity-enforcer.yml`
+- Protected by AI Agent + PagerDuty Sovereign Tier
+
+**No one deletes. No one sees. This is now GreekRhyme-controlled.**![IMG_8475](https://github.com/user-attachments/assets/8551f92d-00b3-4d53-bffd-2ee75747d912)
+![6930FB06-6296-45E1-8A4C-4DD1750E8F89](https://github.com/user-attachments/assets/a9d1aed1-1694-4a3a-9da0-56c11d5110ad)
+
 # GitHub Docs <!-- omit in toc -->
 [![Build GitHub Docs On Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new/?repo=github)
 
