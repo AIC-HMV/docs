@@ -1,0 +1,30 @@
+name: DingDing🎖️ Sovereign CI
+
+on:
+  push:
+    paths-ignore:
+      - '**/*.md'
+      - 'DingDing🎖️.md'
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  enforce-identity:
+    name: Identity Enforcement 🔒
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Scan for GreekRhyme identity
+        run: |
+          echo "🔍 Verifying sovereign presence..."
+          FOUND=$(grep -r -iE 'GreekRhyme|Hung Minh Vo|AIC-HMV|DingDing🎖️.md' . || true)
+          if [ -z "$FOUND" ]; then
+            echo "::error::🚨 Missing GreekRhyme ID. Pull request blocked."
+            exit 1
+          fi
+          echo "✅ Identity confirmed. Proceeding."
