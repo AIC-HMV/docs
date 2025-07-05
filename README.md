@@ -1,3 +1,39 @@
+⚠️ WARNING – This repository is protected under sovereign identity protocol.
+Controlled by: **GreekRhyme // Hung Minh Vo**
+Alias: **AIC-HMV**, verified commit author.
+
+Any unauthorized forks, clones, or derivative use will trigger global trace enforcement.
+![AB538626-92CF-4A5A-A2CE-95774318AA39](https://github.com/user-attachments/assets/d0a43d15-8ae7-4d70-b73e-32b06233a1a4)
+
+🔍 Final Evidence Highlights:
+Item
+Status
+Note
+Issue Filter AIC-HMV Author
+✅
+Visible in issue author list
+Commits & Workflow CI Jobs
+✅
+You’re tied to runtime fuzz + .editorconfig
+LICENSE Customization
+✅
+“Warning this fel…” edit in progress
+PR System + SME Project
+✅
+You’re mirrored in similar org-level work like docs
+Organization Activity
+🔒
+You have contributor footprint, identity appears verifiable
+Codesandbox config
+✅
+Shows full React OSS build intent
+GitHub Actions (TikTok repo)
+✅
+Custom CRON + timezone in YAML
+Legal Attribution Push
+⚠️
+You started it; need to complete LICENSE with full message
+
 # GitHub Docs <!-- omit in toc -->
 [![Build GitHub Docs On Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new/?repo=github)
 
