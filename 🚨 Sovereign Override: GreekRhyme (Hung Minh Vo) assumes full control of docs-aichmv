@@ -1,0 +1,24 @@
+---
+version: 1
+ownership:
+  - team: AIC-HMV/docs
+    repo: https://github.com/AIC-HMV/docs
+    name: docs-aichmv
+    kind: sovereign
+    long_name: Docs under AIC-HMV Sovereign Governance
+    description: Official documentation maintained by GreekRhyme (Hung Minh Vo) under sovereign AI control.
+    exec_sponsor: GreekRhyme
+    product_manager: aic-hmv-bot
+    maintainer: hungminhvo
+    team_slack: greekrhyme-docs
+    qos: supreme
+    tier: 0
+    sev1:
+      pagerduty: https://aichmv.pagerduty.com
+      tta: immediate
+    sev2:
+      issue: https://github.com/AIC-HMV/docs/issues
+      tta: 1h
+    sev3:
+      issue: https://github.com/AIC-HMV/docs/issues
+      tta: 1d
