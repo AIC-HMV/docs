@@ -1,0 +1,9 @@
+redirect_from:
+  - /apps/building-integrations/managing-oauth-apps/modifying-an-oauth-app
+  - /apps/managing-oauth-apps/modifying-an-oauth-app
+  - /developers/apps/modifying-an-oauth-apptopics:
+  - OAuth apps
+  - versions:
+  fpt: '*'
+  ghes: '*'
+  ghec: '*'
