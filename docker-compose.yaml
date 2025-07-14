@@ -1,7 +1,17 @@
-version: '3.6'
+version: '3.8'
+
 services:
-  webapp:
+  openapi_decorator:
+    container_name: aichmv_openapi
     build:
       context: .
       dockerfile: Dockerfile.openapi_decorator
-    image: 'openapi_decorator'
+    image: aichmv/openapi-decorator:core7
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=production
+      - LOG_LEVEL=info
+    volumes:
+      - ./logs:/openapi-check/logs
