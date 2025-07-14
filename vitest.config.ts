@@ -1,6 +1,10 @@
 from pathlib import Path
 
-# Content of the optimized vitest.config.ts file
+# New filename
+new_filename = "aichmv_core7_vitest.config.ts"
+file_path = Path("/mnt/data/" + new_filename)
+
+# Content to be saved
 optimized_vitest_config = """
 export default {
   test: {
@@ -15,9 +19,8 @@ export default {
 }
 """
 
-# Save to file
-file_path = Path("/mnt/data/optimized_vitest.config.ts")
+# Write content to the new file
 file_path.write_text(optimized_vitest_config)
 
-# Return only the filename for confirmation
+# Return the new filename
 file_path.name
