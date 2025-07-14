@@ -1,10 +1,13 @@
-data/release-notes/
-src/bookmarklets/
-/.next/
-
-/.coverage
-/coverage
-
-# Automated content source
-rest-api-description
-semmle-code
+📁 aichmv-core/
+├── 📁 src/
+│   ├── index.ts        ← Entry Core
+│   └── quantum.ts      ← Logic Layer
+├── 📁 config/
+│   └── env.ts          ← Runtime config/keys
+├── 📁 system/
+│   └── protocols.ts    ← Security protocols
+├── 🐳 Dockerfile
+├── 📜 docker-compose.yaml
+├── 📦 package.json
+├── 🔒 .prettierignore (hardened)
+└── 🧠 README.md
