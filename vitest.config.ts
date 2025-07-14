@@ -17,6 +17,7 @@ export default {
 
 # Save this to a file for user download if needed
 file_path = Path("/mnt/data/optimized_vitest.config.ts")
+
 file_path.write_text(optimized_vitest_config)
 
 file_path.name  # Return only the filename for next step response
