@@ -1,6 +1,5 @@
 from pathlib import Path
 
-# Re-create the optimized vitest.config.ts content after code execution reset
 optimized_vitest_config = """
 export default {
   test: {
@@ -15,9 +14,7 @@ export default {
 }
 """
 
-# Save this to a file for user download if needed
+# Save output
 file_path = Path("/mnt/data/optimized_vitest.config.ts")
-
 file_path.write_text(optimized_vitest_config)
-
 file_path.name  # Return only the filename for next step response
