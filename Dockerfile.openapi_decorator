@@ -1,19 +1,33 @@
+# ⚙️ Base image: Secure Node.js LTS on Alpine
 FROM node:18.15-alpine
 
-RUN apk add --no-cache git python make g++
+# 🔒 Install essential tools for build/runtime
+RUN apk add --no-cache \
+  git \
+  python3 \
+  make \
+  g++ \
+  && npm install -g npm@latest
 
+# 🧭 Define working directory
 WORKDIR /openapi-check
 
+# 🧼 Ensure proper ownership
 RUN chown node:node /openapi-check -R
 
+# 👤 Switch to non-root user
 USER node
 
-COPY --chown=node:node package.json /openapi-check
-COPY --chown=node:node package-lock.json /openapi-check
-ADD --chown=node:node src /openapi-check/src
-ADD --chown=node:node content /openapi-check/content
-ADD --chown=node:node data /openapi-check/data
+# 📦 Copy and assign permissions for app dependencies
+COPY --chown=node:node package*.json ./
 
-RUN npm ci -D
+# 📦 Install dependencies
+RUN npm ci --omit=dev
 
-ENTRYPOINT ["node", "/openapi-check/src/rest/scripts/openapi-check.js"]
+# 📁 Add source, content, and data directories
+ADD --chown=node:node src ./src
+ADD --chown=node:node content ./content
+ADD --chown=node:node data ./data
+
+# 🚀 Set startup command
+ENTRYPOINT ["node", "src/rest/scripts/openapi-check.js"]
