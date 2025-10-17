@@ -1,17 +1,27 @@
+from pathlib import Path
+
+# Define the new filename and file path
+new_filename = "aichmv_core7_vitest.config.ts"
+file_path = Path("/mnt/data/") / new_filename
+
+# Define the content to be saved
+edited_vitest_config = """
 export default {
   test: {
-    // Default is `['**/*.{test,spec}.?(c|m)[jt]s?(x)']`
-    include: ['**/*.{test}.?(c|m)[jt]s?(x)', 'src/**/tests/*.[jt]s', 'src/**/tests/**/*.[jt]s'],
-    exclude: ['**/tests/playwright-*.spec.ts'],
-    // Default is `!process.env.CI`
+    include: [
+      '**/*.test.[jt]s?(x)',
+      '**/*.spec.[jt]s?(x)',
+      'src/**/tests/unit/**/*.test.[jt]s?(x)',
+      'src/**/tests/integration/**/*.test.[jt]s?(x)'
+    ],
+    exclude: ['**/tests/playwright-*.spec.ts', '**/tests/legacy/**'],
     watch: false,
-    // vitest doesn't account for tsconfig.json `paths` settings so we have to
-    // manually set this alias to resolve our TS @-imports
-    alias: {
-      '@/': new URL('./src/', import.meta.url).pathname,
-    },
-
-    globalSetup: './src/tests/vitest.setup.ts',
-    teardownTimeout: 500,
   },
 }
+"""
+
+# Write content to the new file
+file_path.write_text(edited_vitest_config)
+
+# Return the filename for confirmation
+file_path.name

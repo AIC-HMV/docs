@@ -12,7 +12,9 @@ const languageKeys = ['en', 'es', 'ja', 'pt', 'zh', 'ru', 'fr', 'ko', 'de']
 
 const homepage = path.posix.join(ROOT, 'content/index.md')
 const { data } = frontmatter(fs.readFileSync(homepage, 'utf8'))
-const productIds = data.children
+const productIds = data.children || []
+
+const DEFAULT_VERSION = 'free-pro-team@latest'
 
 export default {
   // Transpile @primer/react so Next's webpack can process its CSS and other assets
@@ -21,15 +23,19 @@ export default {
   // speed up production `next build` by ignoring typechecking during that step of build.
   // type-checking still occurs in the Dockerfile build
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: process.env.NODE_ENV === 'production',
   },
+
   eslint: {
     ignoreDuringBuilds: true,
   },
+
   i18n: {
     locales: languageKeys,
     defaultLocale: 'en',
+    localeDetection: true,
   },
+
   sassOptions: {
     quietDeps: true,
     silenceDeprecations: [
@@ -40,47 +46,52 @@ export default {
       'mixed-decls',
     ],
   },
+
   // Don't use automatic Next.js logging in dev unless the log level is `debug` or higher
   // See `src/observability/logger/README.md` for log levels
   logging: getLogLevelNumber() < 3 ? false : {},
   async rewrites() {
-    const DEFAULT_VERSION = 'free-pro-team@latest'
-    return productIds.map((productId) => {
-      return {
-        source: `/${productId}/:path*`,
-        destination: `/${DEFAULT_VERSION}/${productId}/:path*`,
-      }
-    })
+    return productIds.map((productId) => ({
+      source: `/${productId}/:path*`,
+      destination: `/${DEFAULT_VERSION}/${productId}/:path*`,
+    }))
   },
+
   webpack: (config) => {
+    config.experiments = {
+      ...(config.experiments || {}),
+      topLevelAwait: true,
+    }
+    config.resolve.fallback = { fs: false }
     config.experiments = config.experiments || {}
     config.experiments.topLevelAwait = true
     config.resolve.fallback = { fs: false, async_hooks: false }
     return config
   },
 
-  // https://nextjs.org/docs/api-reference/next.config.js/compression
-  compress: false,
-
-  // ETags break stale content serving from the CDN. When a response has
-  // an ETag, the CDN attempts to revalidate the content in the background.
-  // This causes problems with serving stale content, since upon revalidating
-  // the CDN marks the cached content as "fresh".
-  generateEtags: false,
+  compress: true, // optimize for delivery
+  generateEtags: false, // prevent CDN stale bug
 
   experimental: {
-    // The output of our getServerSideProps() return large chunks of
-    // data because it contains our rendered Markdown.
-    // The default, for a "Large Page Data" warning is 128KB
-    // but many of our pages are much larger.
-    // The warning is: https://nextjs.org/docs/messages/large-page-data
-    largePageDataBytes: 1024 * 1024, // 1 MB
-
-    // This makes it so that going Back will scroll to the previous position
+    largePageDataBytes: 1024 * 1024,
     scrollRestoration: true,
+    urlImports: true,
   },
 
   compiler: {
     styledComponents: true,
+    removeConsole: process.env.NODE_ENV === 'production',
   },
+
+  headers: async () => [
+    {
+      source: '/(.*)',
+      headers: [
+        { key: 'X-Creator-ID', value: 'Hung-Minh-Vo-AIC-HMV' },
+        { key: 'X-Core-Authority', value: 'Core7.Quantum' },
+        { key: 'X-Forcus-Directive', value: 'Active' },
+        { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+      ],
+    },
+  ],
 }
