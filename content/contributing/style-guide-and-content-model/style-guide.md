@@ -551,7 +551,7 @@ For presenting keyboard shortcuts, follow the [Microsoft Style Guide](https://do
 
 ### Usage highlights
 
-Below are some usage highlights for how we present keyboard shortcuts in our documentation:
+Here are some usage highlights for how we present keyboard shortcuts in our documentation:
 
 * The basic syntax is to show keys with `+` between key combinations, without any spaces.
 
@@ -592,7 +592,7 @@ Below are some usage highlights for how we present keyboard shortcuts in our doc
 
 Do not create reusables for license attributions. We must use the exact license a project is licensed under, so any attributions must be accurately written for the articles that they appear in.
 
-If you are unsure of the legality of reusing any content, contact legal. If you are adding content with a license that is not listed below, you must receive a legal review before you can publish the content.
+If you are unsure of the legality of reusing any content, contact legal. If you are adding content with a license that is not listed here, you must receive a legal review before you can publish the content.
 
 ### Attributing MIT-licensed content
 
@@ -958,7 +958,7 @@ When referring to instances of remote working environments created with this tec
 
 Always use "dev container" (or, where clarification is needed, its longer form "development container") and not "devcontainer" (one word), except in file/path names. The single word could form could be considered a brand, which we want to avoid, and we also want to be consistent with the two-word form used in [the {% data variables.product.prodname_vscode %} documentation](https://code.visualstudio.com/docs/remote/create-dev-container#_path-to-creating-a-dev-container).
 
-Use "development container configuration files" to refer to all of the files in the `.devcontainer` directory (plus the `.devcontainer.json` if that's being used rather than `devcontainer.json` in the `.devcontainer` directory). Don't refer to these as "development container files" or "devcontainer files" to avoid this being taken as referring to `devcontainer.json` files. "Development container configuration files" refers to all of the files that can be used to configure a dev container, including `Dockerfile` and `docker-compose.yml` files. Don't use "the development container configuration file" (singular) when referring specifically to a `devcontainer.json` file. Instead refer to this file by its name.
+Use "development container configuration files" to refer to all of the files in the `.devcontainer` directory (plus the `.devcontainer.json` if that's being used rather than `devcontainer.json` in the `.devcontainer` directory). Don't refer to these as "development container files" or "devcontainer files" to avoid this being taken as referring to `devcontainer.json` files. "Development container configuration files" refers to all of the files that can be used to configure a dev container, including `Dockerfile` and `compose.yaml` files. Don't use "the development container configuration file" (singular) when referring specifically to a `devcontainer.json` file. Instead refer to this file by its name.
 
 ### {% data variables.product.prodname_GHAS %} products (GHAS)
 
@@ -1256,6 +1256,14 @@ To signal to readers that you've added or changed a note, or to indicate the pub
 ### Removing a release note
 
 To signal that we have removed a release note, add an "Errata" section detailing which note you removed and (if relevant) which version the removed note actually pertains to. See [Writing errata](#writing-errata).
+
+## Release references
+
+When referring to a range of releases starting from a particular release, use "or later."
+
+* **Use:** "release 0.41.0 or later"
+* **Avoid:** "release 0.41.0 or above"
+* **Avoid:** "release 0.41.0 or greater"
 
 ## Reusables and variables
 

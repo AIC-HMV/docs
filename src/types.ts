@@ -1,7 +1,7 @@
 import type { Request } from 'express'
 import type { Failbot } from '@github/failbot'
 
-import type enterpriseServerReleases from '@/versions/lib/enterprise-server-releases.d.ts'
+import type enterpriseServerReleases from '@/versions/lib/enterprise-server-releases.d'
 import type { ValidOcticon } from '@/landings/types'
 
 // Throughout our codebase we "extend" the Request object by attaching
@@ -55,6 +55,8 @@ export type PageFrontmatter = {
   defaultPlatform?: 'mac' | 'windows' | 'linux'
   defaultTool?: string
   childGroups?: ChildGroup[]
+  sidebarLink?: SidebarLink
+  spotlight?: SpotlightItem[]
 }
 
 type FeaturedLinks = {
@@ -75,6 +77,11 @@ export type ChildGroup = {
   octicon: string
   children: string[]
   icon?: string
+}
+
+export type SpotlightItem = {
+  article: string
+  image: string
 }
 
 export type Product = {
@@ -304,6 +311,7 @@ export type SecretScanningData = {
   isPrivateWithGhas: boolean
   hasPushProtection: boolean
   hasValidityCheck: boolean | string
+  base64Supported: boolean
   isduplicate: boolean
 }
 
@@ -323,6 +331,7 @@ export type Permalink = {
   pageVersion: string
   title: string
   href: string
+  hrefWithoutLanguage: string
 }
 
 export type FrontmatterVersions = {
@@ -361,10 +370,17 @@ export type Page = {
   effectiveDate?: string
   fullTitle?: string
   render: (context: Context) => Promise<string>
+  buildRedirects: () => Record<string, string>
   octicon?: string
   category?: string[]
   complexity?: string[]
   industry?: string[]
+  sidebarLink?: SidebarLink
+}
+
+export type SidebarLink = {
+  text: string
+  href: string
 }
 
 type ChangeLog = {
@@ -380,6 +396,8 @@ export type TitlesTree = {
   documentType?: string
   childPages: TitlesTree[]
   hidden?: boolean
+  sidebarLink?: SidebarLink
+  layout?: string
 }
 
 export type Tree = {
@@ -468,4 +486,6 @@ export type MarkdownFrontmatter = {
   versions: FrontmatterVersions
   subcategory?: boolean
   hidden?: boolean
+  type?: string
+  contentType?: string
 }

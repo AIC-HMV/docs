@@ -27,6 +27,9 @@ All users that are part of your enterprise have one of the following roles.
 {%- ifversion guest-collaborators %}
 * **Guest collaborator:** Can be granted access to repositories or organizations, but has limited access by default ({% data variables.product.prodname_emus %} only)
 {%- endif %}
+{%- ifversion unaffiliated-users %}
+* **Unaffiliated user:** Has been added to the enterprise but isn't a member of any organizations
+{%- endif %}
 
 {% ifversion ghec %}For information about which users consume a license, see [AUTOTITLE](/billing/managing-the-plan-for-your-github-account/about-per-user-pricing#people-that-consume-a-license).{% endif %}
 
@@ -78,10 +81,11 @@ Enterprise owners do not have access to organization settings or content by defa
 
 ## Billing managers
 
-Billing managers only have access to your enterprise's billing settings. They can:
-* View and manage user licenses, usage-based billing, and other billing settings
-* View a list of billing managers
-* Add or remove other billing managers
+Billing managers only have access to your enterprise's billing settings. They can view and manage:
+
+* User licenses
+* Usage-based billing
+* Other billing settings
 
 Billing managers do not have access to organization settings or content by default except for internal repositories within an enterprise in which they are a member.
 
@@ -108,3 +112,33 @@ Enterprise members:
 You may need to update your IdP application to use guest collaborators. See [AUTOTITLE](/admin/managing-accounts-and-repositories/managing-users-in-your-enterprise/enabling-guest-collaborators).
 
 {% endif %}
+
+{% ifversion unaffiliated-users %}
+
+## Unaffiliated users
+
+Unaffiliated users are people who have been added to your enterprise but aren't members of any organizations. These users:
+
+* Do not consume a standard {% data variables.product.prodname_enterprise %} license.
+* Cannot access private or internal repositories.
+* Can be added as members of organizations or enterprise teams.
+* Can receive a {% data variables.product.prodname_copilot_short %} license directly from your enterprise.
+
+You can add unaffiliated users from your identity provider (for {% data variables.product.prodname_emus %}) or by inviting users at the enterprise level (for personal accounts). For personal accounts, see [AUTOTITLE](/admin/managing-accounts-and-repositories/managing-users-in-your-enterprise/invite-users-directly).
+
+{% endif %}
+
+## Custom organization roles
+
+With {% data variables.product.prodname_ghe_cloud %} and starting from {% data variables.product.prodname_ghe_server %} 3.19, enterprise owners can create custom organization roles for use in all of the enterprise's organizations. This allows centralized management of common roles such as "Developer" or "SRE team". Only enterprise owners can create or edit these roles, and any organization owner or user with the "Manage organization roles" permission can assign them in an organization.
+
+When creating an organization role, enterprise owners can use the same organization and repository permissions and base roles as organization owners—there is no difference in how these roles function or what they can allow.
+
+{% data reusables.enterprise-accounts.access-enterprise %}
+{% data reusables.enterprise-accounts.people-tab %}
+1. Select the "Organization Roles" section in the left-hand menu.
+1. Create a new role using the "Create custom role" button, or edit an existing role using the ellipsis menu (...).
+
+See [AUTOTITLE](/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles) for more information about creating and assigning custom organization roles.
+
+At this time, up to 20 custom organization roles can be created by the enterprise. This limit is only for the enterprise - each organization can also create up to 20 custom organization roles.

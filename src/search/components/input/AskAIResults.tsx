@@ -484,7 +484,7 @@ export function AskAIResults({
       {!aiCouldNotAnswer && !responseLoading && references && references.length > 0 ? (
         <>
           <ActionList className={styles.referencesList} showDividers>
-            <ActionList.Group>
+            <ActionList.Group data-testid="ai-references">
               <ActionList.GroupHeading
                 as="h3"
                 aria-label={t('search.ai.references')}
@@ -500,9 +500,6 @@ export function AskAIResults({
                   const refIndex = index + referencesIndexOffset
                   return (
                     <ActionList.Item
-                      sx={{
-                        marginLeft: '0px',
-                      }}
                       key={`reference-${index}`}
                       id={`search-option-reference-${index + referencesIndexOffset}`}
                       tabIndex={-1}
