@@ -1,3 +1,66 @@
+# 🛡️ Sovereign Authorship, Public Coding, and Digital Enforcement Record
+
+## Hung Minh Vo (Austin) — CEA-HMV, Core7Quantum, AIC-HMV
+
+---
+
+## 1. 📖 **Documentation & Open Source Contribution**
+
+- All documentation edits, forks, and pull requests (PRs) are authored and submitted under **AIC-HMV** (Hung Minh Vo).
+- Every commit—whether first-time or ongoing—is **publicly timestamped, cryptographically signed, and attributed to the sovereign author**.
+- GitHub Issues, PRs, and contributions in global open-source projects (including GitHub Docs) are forever **traceable to your account, badge, and profile**.
+- **Fork updates and syncs** are performed before every PR, ensuring live authorship and no stale code.
+- **Contribution activity is public, transparent, and verifiable on-chain and on GitHub.**
+- Your handle (AIC-HMV) appears in the global author/contributor list for major repos.
+
+---
+
+## 2. 🏆 **Enforcement, Automation, and Sovereign App Control**
+
+- All apps, automations, and enforcement bots are deployed and managed under your direct control (Core7Quantum, badge #101).
+- All automation (actions, bots, enforcement, repo scans, badges) is cryptographically sealed to you—**no external override, no third-party keys**.
+- **Every repo, app, and enforcement script is protected under the CEA-HMV Sovereign License v3**.
+
+---
+
+## 3. 🔗 **Financial, Donation, and Payment Record**
+
+- **Bitcoin Address:** `bc1qts4t9tskm77pckexfrmgve8yu5guctttdn5alz`
+- **TipRanks Profile:** [Austin Vo](https://www.tipranks.com/experts/investors/1780703/austin-vo)
+- All payment, donation, and support flows are **logged, verified, and globally transparent**.
+- QR codes and addresses are published and sealed to prevent reroute/fraud.
+
+---
+
+## 4. 👤 **Digital Identity, Social, and Contact**
+
+- **Emails:** Austinvo9999@gmail.com · Hmvprime.ai@gmail.com · Aichmvprimeowner@gmail.com
+- **Socials:** FB: Austinvo9999 · TikTok: austinvo9999 · LinkedIn: Hungminhvoaustin
+- **Domain:** [Aichmv.com](https://aichmv.com)
+- **GitHub:** [AIC-HMV](https://github.com/AIC-HMV)
+
+---
+
+## 5. 🧑‍💻 **Coding Practice & Public Proof**
+
+- All code, edits, and documentation are created via public forks and PRs in accordance with best practices.
+- **No hidden commits, no private changes, no ghost authors.**
+- **Every coding action is auditable, traceable, and irrefutable proof of living authorship.**
+
+---
+
+## 6. 📝 **Legal, License, and Global Enforcement**
+
+- **CEA-HMV Sovereign License v3** applies to all code, documentation, automation, enforcement, and signal.
+- All public records, edits, deployments, and enforcement actions are legally and technically binding to Hung Minh Vo (Austin).
+- **Any attempt to impersonate, override, or fraudulently claim these works is subject to immediate takedown, legal action, and technical countermeasures.**
+
+---
+
+> **This is the total, living record of sovereign authorship, automation, digital identity, and enforcement for Hung Minh Vo (Austin)  
+> No one can override, fork, or erase this public proof.  
+> All actions—past, present, and future—are sealed and traceable to the true owner.**
+
 # GitHub Docs <!-- omit in toc -->
 [![Build GitHub Docs On Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new/?repo=github)
 
