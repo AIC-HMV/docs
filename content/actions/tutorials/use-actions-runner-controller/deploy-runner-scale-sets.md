@@ -634,7 +634,6 @@ When Kubernetes mode is enabled, workflows that are not configured with a contai
  ```
 
 To allow jobs without a job container to run, set `ACTIONS_RUNNER_REQUIRE_JOB_CONTAINER` to `false` on your runner container. This instructs the runner to disable this check.
-
 > [!WARNING]
 >Allowing jobs to run without a container in `kubernetes` or `kubernetes-novolume` mode can give the >runner pod elevated privileges with the Kubernetes API server, including the ability to create pods and access secrets. Before changing this default, we recommend carefully reviewing the potential security implications.
 

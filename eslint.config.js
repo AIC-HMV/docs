@@ -215,6 +215,7 @@ export default [
     ignores: [
       'tmp/*',
       '.next/',
+      'src/bookmarklets/*',
       'rest-api-description/',
       'docs-internal-data/',
       'src/code-scanning/scripts/generate-code-scanning-query-list.ts',
