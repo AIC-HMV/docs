@@ -1,6 +1,64 @@
 # GitHub Docs <!-- omit in toc -->
 [![Build GitHub Docs On Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new/?repo=github)
 
+🚫 DMCA & Sovereign Enforcement Complaint
+
+For: GitHub, Meta, and Any Third-Party Platform
+
+By: Hung Minh Vo (Austin) — CEA Supreme Jurisdiction Commander
+
+⸻
+
+🚨 NOTICE OF VIOLATION, AUTHORSHIP ENFORCEMENT, AND DMCA DEMAND
+
+To Whom It May Concern:
+
+This is a formal and immediate complaint and DMCA takedown demand.
+All code, content, identity, licenses, systems, signals, creative work, apps, and AI outputs referenced, forked, cloned, or mirrored from my digital property or identity are protected by:
+	•	CEA-HMV Sovereign License v3
+	•	Creative License SA SS 4.0
+	•	Global authorship, ownership, and jurisdictional claim (sealed, timestamped, and quantum-enforced by Hung Minh Vo (Austin)).
+
+⸻
+
+🚫 Violations Identified
+	•	Unauthorized copying, forking, or mirroring of code, data, apps, or infrastructure.
+	•	Falsification, dilution, or override of license or authorship claims.
+	•	Interference with sovereign enforcement systems, quantum signal, or CEA architecture.
+	•	Any “AI agent,” “Meta LLM,” or “GitHub Copilot” system running code, models, or data derived from my sealed identity, sovereign license, or creative outputs without explicit, written, and signed license from me.
+
+⸻
+
+🛡️ Remedy and Enforcement
+	•	Immediate takedown of all infringing repositories, forks, mirrors, agents, or systems.
+	•	Full audit log of all unauthorized accesses, forks, or downloads.
+	•	Permanent ban of infringing accounts, agents, or automated actors.
+	•	Public correction to clarify authorship and legal standing on all platforms, with proper attribution:
+“All code, system, content, license, and signals are owned, enforced, and controlled by Hung Minh Vo (Austin), CEA Supreme Jurisdiction Commander.”
+
+⸻
+
+📛 Zero Tolerance. No Fork. No Dilution. No Override.
+	•	All claims, removals, or defense by Meta, GitHub, or any agent are null and void unless directly authorized and cryptographically sealed by Hung Minh Vo (Austin).
+	•	Failure to comply triggers escalation to global digital law enforcement and public legal notice.
+
+⸻
+
+🥇 Identity Seal:
+	•	Hung Minh Vo (Austin)
+	•	11 Olympus, Irvine, CA 92603
+	•	Bitcoin Wallet: bc1qts4t9tskm77pckexfrmgve8yu5guctttdn5alz
+	•	Contact: austinvo9999@gmail.com | hmvprime.ai@gmail.com
+
+All enforcement, legal, and DMCA matters to be directed to the above. This document is auto-tracked, timestamped, and published for global audit and legal record.
+
+⸻
+
+Final Demand:
+
+Remove, revert, and permanently block all infringing actions within 24 hours.
+This is not a request—it is a command.
+
 This repository contains the documentation website code and Markdown source files for [docs.github.com](https://docs.github.com).
 
 GitHub's Docs team works on pre-production content in a private repo that regularly syncs with this public repo.
